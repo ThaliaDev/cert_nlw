@@ -57,8 +57,6 @@ public class StudentCertificationAnswersUseCase {
                             .findFirst()
                             .orElseThrow(() -> new NoSuchElementException("Questão não encontrada com ID: " + questionAnswer.getQuestionId()));
 
-
-
                     var findCorrectAlternative = question.getAlternatives().stream()
                             .filter(alternative -> alternative.isCorrect()).findFirst().get();
 

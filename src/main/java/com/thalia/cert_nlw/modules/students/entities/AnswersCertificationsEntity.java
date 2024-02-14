@@ -42,6 +42,7 @@ public class AnswersCertificationsEntity {
 
     @ManyToOne
     @JoinColumn(name = "student_id", insertable = false, updatable = false)
+    @JsonBackReference
     private StudentEntity studentEntity;
 
     @Column(name = "question_id")
